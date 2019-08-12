@@ -33,16 +33,16 @@ KrishnaTestPkg.pug
     - the [UDK code tree](https://github.com/tianocore/edk2)
     - the openssl repo (and some other CryptoPkg's submodules maybe)
     - [Krishna's KrishnaTestPkg](https://github.com/krishna116/UefiTest.git)
-4. Browse to folder **Build/MyApps** for the build results.
-5. Browse to folder **Build/Pug/Conf** for CONF_PATH setting files.
+4. Browse to folder **Build/KrishnaTest** for the build results.
+5. Browse to folder **Build/Conf** for CONF_PATH setting files.
 6. Run `python project.py {clean, cleanall}` to clean (all) the intermediate files.
 
 
 ## Known issues:
 1. Working for Linux/GCC only. Windows/MSVC seems having some C99 incompatibility issues to deal with. Xcode is not tested.
 2. The original KrishnaTestPkg has some trivial build issues to fix as well.
-    - fix: `#include <Library/PrintLib.h >`  --> `#include <Library/PrintLib.h>`
-    - add KrishnaTestPkg.dsc::BuildOptions with `GCC:*_*_*_CC_FLAGS    = -Wno-missing-braces -Wno-incompatible-pointer-types`
+    - fix: `#include <Library/PrintLib.h >`  -->  `#include <Library/PrintLib.h>`
+    - append KrishnaTestPkg.dsc :: BuildOptions with `GCC:*_*_*_CC_FLAGS    = -Wno-missing-braces -Wno-incompatible-pointer-types`
 
 
 ## Tech notes:

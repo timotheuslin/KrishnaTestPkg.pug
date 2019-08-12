@@ -1,16 +1,16 @@
-# Project configuration file for PUG.
+#!/usr/bin/env python
 #
 # -*- coding: utf-8 -*-
 # pylint: disable=invalid-name, line-too-long
 #
 # (c) 2019 Timothy Lin <timothy.gh.lin@gmail.com>, BSD 3-Clause License.
-#
-
-import os
 
 """
 This is the project configuration file as well the starter script for iPug.
 """
+
+
+import os
 
 
 # These UDK tag source trees have been build-tested:
