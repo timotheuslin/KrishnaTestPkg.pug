@@ -41,8 +41,8 @@ KrishnaTestPkg.pug
 ## Known issues:
 1. Working for Linux/GCC only. Windows/MSVC seems having some C99 incompatibility issues to deal with. Xcode is not tested.
 2. The original KrishnaTestPkg has some trivial build issues to fix as well.
-    - fix: `#include <Library/PrintLib.h >`  -->  `#include <Library/PrintLib.h>`
-    - append KrishnaTestPkg.dsc :: BuildOptions with `GCC:*_*_*_CC_FLAGS    = -Wno-missing-braces -Wno-incompatible-pointer-types`
+    - ~~fix: `#include <Library/PrintLib.h >`  -->  `#include <Library/PrintLib.h>`~~
+    - ~~append KrishnaTestPkg.dsc :: BuildOptions with `GCC:*_*_*_CC_FLAGS    = -Wno-missing-braces -Wno-incompatible-pointer-types`~~
 
 
 ## Tech notes:
@@ -52,6 +52,6 @@ KrishnaTestPkg.pug
 2. On Windows, the default MSVC tool chain tag is "vs2012x86". The following command should be run first in the command console:
     - "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" x86
 3. **KrishnaTestPkg.pug**, as the current working directory, is assigned as the "WORKSPACE" directory. **[PACKAGES_PATH a.k.a. MULTIPLE-WORKSPACE](https://github.com/tianocore/tianocore.github.io/wiki/Multiple_Workspace)** is used here to implicitly reference other standard packages outside the current working directory tree.
-
+4. A patch file, `project.path` has been applied automatically to the git-cloned code tree as a temporary solution to the build issues.
 
 ## Have Fun!

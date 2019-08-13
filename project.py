@@ -37,6 +37,7 @@ CODETREE = {
             'signature' : '',
         },
         'multiworkspace': True,
+        'patch'         : 'git apply --directory=UefiTest project.patch',
     },
     # edk2-libc is a new edk2 repo since edk2-stable201905. StdLib resides in this repo.
     'edk2-libc'    : {

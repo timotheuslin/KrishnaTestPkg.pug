@@ -1,0 +1,36 @@
+diff --git a/KrishnaTestPkg/Application/grep/grep.h b/KrishnaTestPkg/Application/grep/grep.h
+index 172c646..fb4d173 100644
+--- a/KrishnaTestPkg/Application/grep/grep.h
++++ b/KrishnaTestPkg/Application/grep/grep.h
+@@ -8,7 +8,7 @@
+ #include <Library/BaseMemoryLib.h>
+ #include <Library/MemoryAllocationLib.h>
+ #include <Library/DebugLib.h>
+-#include <Library/PrintLib.h >
++#include <Library/PrintLib.h>
+ #include <Library/ShellLib.h>
+ #include <Library/ArgumentManagerLib.h>  //gArgumentManager
+ 
+diff --git a/KrishnaTestPkg/KrishnaTestPkg.dsc b/KrishnaTestPkg/KrishnaTestPkg.dsc
+index 94a4241..24af60a 100644
+--- a/KrishnaTestPkg/KrishnaTestPkg.dsc
++++ b/KrishnaTestPkg/KrishnaTestPkg.dsc
+@@ -70,3 +70,4 @@
+   
+ [BuildOptions]
+   *_*_*_CC_FLAGS = -D DISABLE_NEW_DEPRECATED_INTERFACES
++  GCC:*_*_*_CC_FLAGS = -Wno-missing-braces -Wno-incompatible-pointer-types
+\ No newline at end of file
+diff --git a/KrishnaTestPkg/Library/ArgumentManagerLib/ArgumentManagerLib.c b/KrishnaTestPkg/Library/ArgumentManagerLib/ArgumentManagerLib.c
+index ffc5e14..303277a 100644
+--- a/KrishnaTestPkg/Library/ArgumentManagerLib/ArgumentManagerLib.c
++++ b/KrishnaTestPkg/Library/ArgumentManagerLib/ArgumentManagerLib.c
+@@ -5,7 +5,7 @@
+ #include <Library/BaseMemoryLib.h>
+ #include <Library/MemoryAllocationLib.h>
+ #include <Library/DebugLib.h>
+-#include <Library/PrintLib.h >
++#include <Library/PrintLib.h>
+ #include <Library/ShellLib.h>
+ #include <Library/ArgumentManagerLib.h>
+ 
